@@ -97,7 +97,7 @@ DATABASES = {
         'USER': env('USER'),
         'PASSWORD': env('PASSWORD'),
         'HOST': env('HOST'),
-        'PORT': '3306',  # The default MySQL port
+        'PORT': '',  # The default MySQL port
         }
     }
 
@@ -188,18 +188,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
     
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS =True
-SECURE_HSTS_SECONDS = 31536000
-SECURE_REDIRECT_EXEMPT = []
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https', 'http')
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SECURE_BROWSER_XSS_FILTER = True
+#SECURE_CONTENT_TYPE_NOSNIFF = True
+#SECURE_HSTS_INCLUDE_SUBDOMAINS =True
+#SECURE_HSTS_SECONDS = 31536000
+#SECURE_REDIRECT_EXEMPT = []
+#SECURE_SSL_REDIRECT = True
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     
-ALLOWED_HOSTS = ['mycoes.com', 'www.mycoes.com']
+ALLOWED_HOSTS = ['16.16.133.130', 'mycoes.com', 'www.mycoes.com']
     
     
 # Default primary key field type

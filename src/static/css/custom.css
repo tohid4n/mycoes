@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -105,17 +104,24 @@ main {
 
 /* Scroll effect */
 
-
-
-.scroll-effect {
-    position: fixed;
-    top: 1rem;
+.carousel-container {
+  position: relative;
 }
+
+@media (min-width: 1024px) {
+  .carousel-container.fixed {
+    position: fixed;
+    top: 5rem;
+    transition: top 0.5s ease;
+    padding-right: 1rem;
+    /* Additional styling for fixed position */
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
-  .carousel {
+  .carousel-container {
     position: none;
     z-index: 1;
 }} 
-
-
 

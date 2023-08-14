@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from django.urls import reverse
 from django.views import  generic
 from .forms import ContactForm
+from django.http import HttpResponse
 
 
 class HomePageView(generic.TemplateView):
@@ -60,3 +61,13 @@ class ContactView(generic.FormView):
        
 
 
+class SitemapView(generic.View):
+    def get(self, request):
+        sitemap_path = '/var/www/html/sitemap.xml'  # Path to your sitemap.xml file
+        if os.path.exists(sitemap_path):
+            with open(sitemap_path, 'r') as f:
+                content = f.read()
+                response = HttpResponse(content, content_type='application/xml')
+                return response
+        else:
+            return HttpResponse(status=404)
