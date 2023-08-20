@@ -20,7 +20,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = False
 
 # Application definition
 
@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'orders',
     'status',
     'user_profile',
-    'feedback'
+    'feedback',
+    'projects',
     
 ]
 
